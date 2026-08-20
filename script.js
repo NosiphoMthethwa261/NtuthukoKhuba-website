@@ -54,31 +54,54 @@ document.addEventListener('keydown', (e) => {
 
 document.getElementById('closeModalAfterSuccess')?.addEventListener('click', closeModal);
 
-// ---------- FORM HANDLING ----------
+// ---------- FORM HANDLING (UPDATED) ----------
 const form = document.getElementById('enquiryForm');
 const successMessage = document.getElementById('formSuccess');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    // Show loading state
+    const submitBtn = form.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+    
     const formData = new FormData(form);
+    
     try {
         const response = await fetch(form.action, {
             method: 'POST',
             body: formData,
-            headers: { 'Accept': 'application/json' }
+            headers: {
+                'Accept': 'application/json'
+            }
         });
+        
+        // Check if the response is OK
         if (response.ok) {
+            // Success!
             form.style.display = 'none';
             successMessage.style.display = 'block';
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-            alert('Oops! Something went wrong. Please try again.');
+            // Server returned an error
+            const errorData = await response.json();
+            console.error('Formspree error:', errorData);
+            alert('Oops! Something went wrong. Please try again or email us directly.');
         }
     } catch (error) {
-        alert('Network error. Please check your connection.');
+        // Network error or other issue
+        console.error('Network error:', error);
+        alert('Network error. Please check your internet connection and try again.');
+    } finally {
+        // Reset button state
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     }
 });
 
-// Smooth scrolling
+// ---------- SMOOTH SCROLLING ----------
 document.querySelectorAll('a[href^="#"]:not(#openModalBtn):not(#openModalBtnHero)').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
