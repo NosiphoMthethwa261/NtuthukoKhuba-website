@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUR COMPANY NAME – Travel Made Simple</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <a href="#" class="logo">YOUR<span>COMPANY</span></a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#" id="openModalBtn" style="color: #fbbf24;">Enquire</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-compass" style="margin-right: 6px;"></i> 
+                Curated for you
+            </div>
+            <h1>
+                Travel with <br /><span class="company-name">YOUR COMPANY NAME</span>
+            </h1>
+            <p>
+                We handle the hassle — find the best accommodations, car rentals, 
+                and activities that fit your wallet. Enquire today and let us plan 
+                your perfect trip.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" id="openModalBtnHero">
+                    <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Start Enquiry
+                </a>
+                <a href="#gallery" class="btn btn-secondary">
+                    <i class="fas fa-chevron-circle-down" style="margin-right: 8px;"></i> View Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES STRIP ========== -->
+    <div class="services-strip">
+        <div class="service-item">
+            <div class="icon"><i class="fas fa-hotel"></i></div>
+            <h3>Accommodation</h3>
+            <p>Budget to luxury — we find your perfect stay</p>
+        </div>
+        <div class="service-item">
+            <div class="icon"><i class="fas fa-car"></i></div>
+            <h3>Car Rentals</h3>
+            <p>Reliable rides at the best local rates</p>
+        </div>
+        <div class="service-item">
+            <div class="icon"><i class="fas fa-hiking"></i></div>
+            <h3>Activities</h3>
+            <p>Unforgettable experiences, handpicked for you</p>
+        </div>
+    </div>
+
+    <!-- ========== GALLERY SECTION ========== -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore <span>our world</span></h2>
+                <p>Real destinations, real experiences — all within your budget</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="accommodation">🏨 Accommodation</button>
+                <button data-filter="car">🚗 Car Rentals</button>
+                <button data-filter="activity">🏄 Activities</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-card" data-category="accommodation">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach resort" />
+                    <div class="card-body">
+                        <span class="tag">Accommodation</span>
+                        <h3>Beachfront Villas</h3>
+                        <p>Luxury stays with ocean views — budget-friendly options available</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="car">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jeep on mountain road" />
+                    <div class="card-body">
+                        <span class="tag">Car Rentals</span>
+                        <h3>Mountain Road Trips</h3>
+                        <p>Reliable 4x4s and convertibles for every terrain</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="activity">
+                    <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Surfing" />
+                    <div class="card-body">
+                        <span class="tag">Activities</span>
+                        <h3>Surf &amp; Sun</h3>
+                        <p>Lessons, rentals, and guided surf tours for all levels</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="accommodation">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy cabin" />
+                    <div class="card-body">
+                        <span class="tag">Accommodation</span>
+                        <h3>Mountain Cabins</h3>
+                        <p>Cozy retreats with fireplaces and stunning nature views</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="car">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury car" />
+                    <div class="card-body">
+                        <span class="tag">Car Rentals</span>
+                        <h3>Premium Sedans</h3>
+                        <p>Style and comfort for business or leisure travel</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="activity">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hiking" />
+                    <div class="card-body">
+                        <span class="tag">Activities</span>
+                        <h3>Guided Hiking Tours</h3>
+                        <p>Explore hidden trails with expert local guides</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="accommodation">
+                    <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="City apartment" />
+                    <div class="card-body">
+                        <span class="tag">Accommodation</span>
+                        <h3>City Apartments</h3>
+                        <p>Modern stays in the heart of the action — great value</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="activity">
+                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Snorkeling" />
+                    <div class="card-body">
+                        <span class="tag">Activities</span>
+                        <h3>Snorkeling &amp; Diving</h3>
+                        <p>Discover vibrant coral reefs and marine life</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-brand">YOUR<span>COMPANY</span></div>
+        <p>&copy; 2026 YOUR COMPANY NAME. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL POPUP ========== -->
+    <div class="modal-overlay" id="enquiryModal">
+        <div class="modal">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h2>Let's <span>plan your trip</span></h2>
+            <p class="subtitle">Fill in your details and we'll get back to you within 24 hours</p>
+
+            <!-- 👇 REPLACE with your Formspree ID -->
+            <form id="enquiryForm" 
+                  action="https://formspree.io/f/YOUR_FORM_ID" 
+                  method="POST">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+27 82 123 4567" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="travel-date">Travel Date <span class="required">*</span></label>
+                        <input type="date" id="travel-date" name="travel-date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range <span class="required">*</span></label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select your budget</option>
+                            <option value="budget">Budget (Under $500)</option>
+                            <option value="mid">Mid-Range ($500 - $1500)</option>
+                            <option value="luxury">Luxury ($1500+)</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What are you interested in? <span class="required">*</span></label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="accommodation">Accommodation Only</option>
+                        <option value="car">Car Rental Only</option>
+                        <option value="activities">Activities Only</option>
+                        <option value="all">All Three (Full Package)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Preferred Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="e.g., Cape Town, Kruger" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us more <span class="required">*</span></label>
+                    <textarea id="message" name="message" placeholder="Any special requirements..." required></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display: none;" />
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> Send Enquiry
+                </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Thank You!</h3>
+                <p>Your enquiry has been sent successfully. We'll get back to you within 24 hours.</p>
+                <button class="btn btn-primary" style="margin-top:1.5rem;" id="closeModalAfterSuccess">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
